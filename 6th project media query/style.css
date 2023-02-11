@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: white;
+}
+.box{
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    
+}
+.Larger{
+    background-color: green;
+    display: none;
+}
+.Normal{
+    background-color: rgb(132, 88, 32);
+    display: none;
+}
+.Tablet{
+    background-color: blue;
+    display: none;
+}
+.Mobile{
+    background-color: red;
+    display: none;
+}
+
+/* media query */
+
+@media screen and (min-width:1440px){
+    .Larger{
+        display:block;
+        width: 1440px;
+        height: 1440px;
+        text-align: center;
+        font-size: 100px;
+    }
+    .Larger::after{
+        content: "screen size 1440px";  
+    }
+}
+@media(min-width:1024px){
+    .Normal{
+        display: block;
+        width: 1024px;
+        height: 1024px;
+        text-align: center;
+        font-size: 100px;
+    }
+    .Normal::after{
+        content: "screen size 1024px";  
+    }
+}
+@media(min-width:768px){
+    .Tablet{
+        display: block;
+        width: 768px;
+        height: 768px;
+        text-align: center;
+        font-size: 100px;
+    }
+    .Tablet::after{
+        content: "screen size 768px";  
+    }
+}
+@media(min-width:425px){
+    .Mobile{
+        display: block;
+        width: 425px;
+        height: 425px;
+        text-align: center;
+        font-size: 100px;
+    }
+    .Mobile::after{
+        content: "screen size 425px";  
+    }
+}
